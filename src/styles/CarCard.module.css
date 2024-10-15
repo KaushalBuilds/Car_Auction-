@@ -1,0 +1,124 @@
+.imageWrapper {
+  position: relative;
+  width: 100%; /* Full width of the grid column */
+  max-width: 415px;
+  height: auto; /* Allow dynamic height */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px; /* Space between image and price */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  margin-left: auto;
+}
+
+.imageWrapper:hover {
+  transform: scale(1.05); /* Slightly enlarge the image container */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.imageCard {
+  position: relative;
+  display: grid; /* Ensure the <Link> component acts like a block element */
+}
+
+.image {
+  width: 100%;
+  height: 603px; /* Fixed height for uniformity */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border-radius: 10px;
+  transition: opacity 0.3s ease; /* Smooth transition for image opacity */
+}
+
+.imageWrapper:hover .image {
+  opacity: 0.8; /* Slightly reduce image opacity on hover */
+}
+
+.titleOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 100; /* Bold title */
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5); /* Add background for better readability */
+  transition: opacity 0.3s ease; /* Smooth transition for overlay opacity */
+}
+
+.imageWrapper:hover .titleOverlay {
+  opacity: 1; /* Ensure overlay is fully visible on hover */
+}
+
+.price {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .imageWrapper {
+    max-width: 350px; /* Adjust width for tablets */
+  }
+
+  .image {
+    height: 500px; /* Adjust image height for smaller screens */
+  }
+
+  .titleOverlay {
+    font-size: 1.3rem; /* Slightly reduce font size */
+  }
+
+  .price {
+    font-size: 1rem; /* Reduce price font size */
+  }
+}
+
+@media (max-width: 768px) {
+  .imageWrapper {
+    max-width: 100%; /* Use full width for mobile devices */
+    margin-left: 0; /* Reset margin for mobile */
+  }
+
+  .image {
+    height: 400px; /* Adjust image height for mobile devices */
+  }
+
+  .titleOverlay {
+    font-size: 1.1rem; /* Reduce title size for smaller screens */
+  }
+
+  .price {
+    font-size: 0.9rem; /* Adjust price font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .imageWrapper {
+    max-width: 100%; /* Full width for small mobile devices */
+  }
+
+  .image {
+    height: 300px; /* Reduce image height further for small screens */
+  }
+
+  .titleOverlay {
+    font-size: 1rem; /* Smaller title size */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .price {
+    font-size: 0.8rem; /* Further reduce price font size */
+  }
+}
+
+/* Gap between cards and slider */
+.slider {
+  margin-bottom: 30px; /* Space between the slider and image cards */
+}

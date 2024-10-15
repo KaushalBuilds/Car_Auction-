@@ -1,0 +1,91 @@
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.logo {
+    display: block;
+}
+
+.logoLine {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.navContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    position: relative;
+}
+
+.navMenu {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navList {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navItem {
+    padding: 0 15px;
+}
+
+.navLink {
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.3s;
+
+}
+
+.navLink:hover {
+    color: #333;
+    text-decoration: underline;
+    
+}
+
+.signIn {
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(101, 101, 101);
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid rgb(101, 101, 101);
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.signIn:hover {
+    background-color: rgb(101, 101, 101);
+    color: #fff;
+}

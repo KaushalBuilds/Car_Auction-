@@ -1,0 +1,16 @@
+/* src/styles/Auction.module.css */
+.auctionContainer {
+    padding: 20px;
+  }
+  
+  .pageTitle {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .carGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  

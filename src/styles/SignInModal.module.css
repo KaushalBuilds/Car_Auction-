@@ -1,0 +1,134 @@
+/* styles/SignInModal.module.css */
+
+/* Modal Overlay */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Modal Content */
+.modalContent {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%; /* Adjust width to fit smaller screens */
+    position: relative;
+}
+
+/* Close Button */
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #f00;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%; /* Rounded button for better aesthetics */
+    font-size: 18px; /* Adjust font size for smaller screens */
+}
+
+/* Header Style */
+.h2 {
+    margin-top: 0;
+}
+
+/* Sign-In Button */
+.signIn {
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(101, 101, 101);
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid rgb(101, 101, 101);
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    position: absolute;
+    top: 20px; /* Adjusted for consistent spacing */
+    right: 20px; /* Adjusted for consistent spacing */
+    z-index: 1000;
+}
+
+/* Hover Effect */
+.signIn:hover {
+    background-color: rgb(101, 101, 101);
+    color: #fff;
+}
+
+/* Responsive Styles */
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+    .modalContent {
+        padding: 1.5rem; /* Reduce padding */
+        width: 85%; /* Adjust width */
+    }
+
+    .closeButton {
+        top: 8px; /* Adjust position */
+        right: 8px;
+        font-size: 16px; /* Adjust font size */
+    }
+
+    .signIn {
+        font-size: 14px; /* Adjust font size */
+        padding: 8px 16px; /* Adjust padding */
+        top: 15px; /* Adjust position */
+        right: 15px; /* Adjust position */
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+    .modalContent {
+        padding: 1rem; /* Further reduce padding */
+        width: 90%; /* Adjust width */
+    }
+
+    .closeButton {
+        top: 5px; /* Adjust position */
+        right: 5px;
+        font-size: 14px; /* Adjust font size */
+        padding: 8px; /* Adjust padding */
+    }
+
+    .signIn {
+        font-size: 12px; /* Adjust font size */
+        padding: 6px 12px; /* Adjust padding */
+        top: 10px; /* Adjust position */
+        right: 10px; /* Adjust position */
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    .modalContent {
+        padding: 0.5rem; /* Minimal padding */
+        width: 95%; /* Adjust width */
+    }
+
+    .closeButton {
+        top: 2px; /* Adjust position */
+        right: 2px;
+        font-size: 12px; /* Adjust font size */
+        padding: 6px; /* Adjust padding */
+    }
+
+    .signIn {
+        font-size: 10px; /* Adjust font size */
+        padding: 4px 8px; /* Adjust padding */
+        top: 5px; /* Adjust position */
+        right: 5px; /* Adjust position */
+    }
+}

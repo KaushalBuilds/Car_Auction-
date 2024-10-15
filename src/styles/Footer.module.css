@@ -1,0 +1,176 @@
+/* src/components/Footer.module.css */
+
+.footer {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #fff;
+    padding: 20px; /* Reduced padding for smaller screens */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Proxima Nova', sans-serif;
+    gap: 20px;
+}
+
+.leftSection, .centerSection, .rightSection {
+    flex: 1;
+    min-width: 200px; /* Ensure sections don’t get too narrow */
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    margin-bottom: 10px;
+}
+
+.socialMedia {
+    display: flex;
+    gap: 10px;
+}
+
+.centerSection {
+    text-align: center;
+    padding: 20px;
+}
+
+.newsletterText {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.newsletterForm {
+    display: flex;
+    flex-direction: column; /* Stack input and button vertically */
+    align-items: center;
+}
+
+.emailInput {
+    padding: 10px; /* Adjust padding for smaller screens */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 10px; /* Space between input and button */
+    width: 100%; /* Full width of its container */
+    max-width: 300px; /* Max width for larger screens */
+}
+
+.subscribeButton {
+    padding: 10px 20px;
+    background-color: grey;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* Full width of its container */
+    max-width: 300px; /* Max width for larger screens */
+}
+
+.subscribeButton:hover {
+    background-color: #555;
+}
+
+.rightSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.linksList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 10px 20px; /* Space between columns and rows */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.linksList li {
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    position: relative;
+    padding-left: 20px;
+    transition: color 0.3s;
+}
+
+.linksList li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+.linksList li:hover {
+    color: #555;
+}
+
+/* Responsive Styles */
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+    .footer {
+        padding: 15px;
+    }
+
+    .newsletterForm {
+        flex-direction: column; /* Stack input and button vertically */
+    }
+
+    .emailInput, .subscribeButton {
+        max-width: 100%; /* Full width on smaller screens */
+    }
+
+    .linksList {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+    .footer {
+        padding: 10px;
+    }
+
+    .leftSection, .centerSection, .rightSection {
+        flex: 1 1 100%; /* Full width on small screens */
+        margin-bottom: 20px; /* Space between sections */
+    }
+
+    .newsletterText {
+        font-size: 0.9rem; /* Smaller font size */
+    }
+
+    .linksList {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    .footer {
+        padding: 5px;
+        gap: 10px;
+    }
+
+    .newsletterText {
+        font-size: 0.8rem; /* Smaller font size */
+    }
+
+    .emailInput {
+        padding: 8px;
+    }
+
+    .subscribeButton {
+        padding: 8px 16px;
+    }
+
+    .linksList {
+        gap: 5px 10px; /* Reduced gap */
+    }
+}
